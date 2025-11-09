@@ -60,7 +60,21 @@ Solution Pipeline:
 
 ![WhatsApp Image 2025-11-09 at 18 16 20_28cfd89e](https://github.com/user-attachments/assets/5ff3778b-468c-4ba0-aaac-9f791ec0d60c)
 
+#How to run web-app
+- Run in terminal
 
+  ```bash
+  
+   pip install -r requirements.txt
+  ```
+- Download Model - Deepfake_classif from (https://drive.google.com/drive/folders/1Tk2VHyLSuzXWLZrSW02-di8v4TDp51pQ?usp=sharing)
+- Run web_app.py
+
+  ```bash
+  
+   streamlit run web_app.py
+  ```
+  
 ## References to Related Work
 - Studies confirm optimized preprocessing and fusion of frequency/spatial features improves accuracy for low-res deepfake detection.[1][2][4][6][3]
 - Literature supports DFT-, DCT-, and ELA-based approaches for non-face, artifact-level forgery detection.[5][3]
