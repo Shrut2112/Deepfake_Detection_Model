@@ -7,7 +7,7 @@ import io
 from tensorflow.keras.models import load_model
 
 
-model = load_model('Deepfake_classif_new.h5')
+model = load_model('Deepfake_classif.h5')
 
 def compute_ela(img, quality=90):
     pil_img = Image.fromarray(img)
@@ -72,4 +72,5 @@ def get_dft_rgb_feat(image):
 def get_prediction(input_pair):
     """Make model prediction from [rgb_input, dft_input]."""
     pred_prob = model.predict(input_pair)
+
     return pred_prob
