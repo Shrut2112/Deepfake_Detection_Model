@@ -36,18 +36,21 @@ if uploaded_file and button:
         pred = get_prediction([rgb_feat, dft_feat])
         pred_prob = float(pred)
         y_val_pred = (pred_prob >= 0.509)
-        pred_label = classes[y_val_pred]
-        color = "#27ae60" if pred_label == "Real" else "#c0392b"    
+        pred_label = classes[y_val_pred]  
+        color = "#27ae60" if pred_label == "real" else "#c0392b"
+
+        certainty = pred_prob if y_val_pred else (1 - pred_prob)
+        certainty_percent = certainty * 100
 
         st.markdown(f"""
         <div style='text-align:center;'>
             <span style='background:{color}; color:white; padding:8px 30px; border-radius:8px; font-size:1.5em;'>
-                Prediction: <b>{pred_label}</b>
+                Prediction: <b>{pred_label.capitalize()}</b>
             </span>
             <br><br>
-            <span style='font-size:1.1em;'>Probability: <b>{pred_prob:.3f}</b></span>
+            <span style='font-size:1.1em;'>Probability: <b>{pred_prob:.3f}</b></span><br>
+            <span style='font-size:1.1em;'>Certainty: <b>{certainty_percent:.1f}%</b></span>
         </div>""", unsafe_allow_html=True)
-
 
         st.success("Prediction complete! You can try another image.")
 else:
