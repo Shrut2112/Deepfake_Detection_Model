@@ -3,6 +3,10 @@
 ## Problem Overview
 Detecting deepfake images in low-resolution, diverse-object datasets is a significant challenge in computer vision. Unlike typical facial deepfake datasets, this task involves images of various objects (e.g., animals, vehicles) at a small size (32x32 pixels). The absence of facial cues and the low quality of samples require a specialized feature extraction and modeling pipeline. Our goal is to robustly distinguish real and fake images as labeled in the proprietary dataset, matching the expected output format for hackathon evaluation.
 
+Solution Pipeline:
+
+   ![WhatsApp Image 2025-11-09 at 18 15 40_c3bebcd3](https://github.com/user-attachments/assets/012e53ba-014c-4b5d-a215-f3e3c8fc64e1)
+
 ## Data Preprocessing Steps
 - *Image Characteristics:* All images are originally sized at 32x32 pixels and are low quality by design. To avoid losing vital frequency features, images for the frequency branch are used at their original size.
 - *EfficientNet Branch Preprocessing:* Images are resized to 224x224 pixels to match EfficientNetB1's requirements for spatial feature extraction. This resizing is carefully controlled to minimize semantic loss.
@@ -25,6 +29,10 @@ Detecting deepfake images in low-resolution, diverse-object datasets is a signif
   - Optimizer: Adam
   - Loss: Binary cross-entropy with label smoothing
   - Training: Early stopping and validation split (train/val: 80/20)
+ 
+ 
+![WhatsApp Image 2025-11-09 at 18 15 40_45728017](https://github.com/user-attachments/assets/cdbc8aba-89cc-42d3-8b44-7e17a74de321)
+
 
 ## Reasoning Behind Approach
 - *Frequency anomalies* are well-documented in deepfake images, especially in low-res settings. DFT-based magnitude and phase spectra expose these differences, critical for detecting non-face manipulations.[3]
@@ -44,10 +52,16 @@ Detecting deepfake images in low-resolution, diverse-object datasets is a signif
 - *Validation Metrics:*
   | Class     | Precision | Recall | F1-Score | Support |
   |-----------|-----------|--------|----------|---------|
-  | Real (0)  | 0.95      | 0.95   | 0.95     | 637     |
-  | Fake (1)  | 0.95      | 0.95   | 0.95     | 643     |
-  | *Overall*|   —       |   —    | 0.95     | 1280    |
+  | Fake (0)  | 0.95      | 0.95   | 0.95     | 637     |
+  | Real (1)  | 0.95      | 0.95   | 0.95     | 643     |
+  | *Overall* |   —       |   —    | 0.95     | 1280    |
 - The model demonstrates high accuracy and balance across true positive and true negative rates, backing up efficacy on unseen data.
+
+![WhatsApp Image 2025-11-09 at 18 16 20_e9d2937b](https://github.com/user-attachments/assets/756dd2b6-26a1-4217-8892-2cb1aae51017)
+
+
+![WhatsApp Image 2025-11-09 at 18 16 20_28cfd89e](https://github.com/user-attachments/assets/5ff3778b-468c-4ba0-aaac-9f791ec0d60c)
+
 
 ## References to Related Work
 - Studies confirm optimized preprocessing and fusion of frequency/spatial features improves accuracy for low-res deepfake detection.[1][2][4][6][3]
