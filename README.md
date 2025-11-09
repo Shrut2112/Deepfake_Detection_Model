@@ -74,6 +74,12 @@ Solution Pipeline:
   
    streamlit run web_app.py
   ```
+
+## Run Example 
+
+<img width="872" height="907" alt="image" src="https://github.com/user-attachments/assets/c67433ca-3729-4dda-8a41-f081aa7c0f56" />
+
+<img width="850" height="902" alt="image" src="https://github.com/user-attachments/assets/5cd57fe6-c958-4883-8682-ce7653427b50" />
   
 ## References to Related Work
 - Studies confirm optimized preprocessing and fusion of frequency/spatial features improves accuracy for low-res deepfake detection.[1][2][4][6][3]
