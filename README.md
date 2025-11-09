@@ -30,8 +30,6 @@ Solution Pipeline:
   - Loss: Binary cross-entropy with label smoothing
   - Training: Early stopping and validation split (train/val: 80/20)
  
- 
-![WhatsApp Image 2025-11-09 at 18 15 40_45728017](https://github.com/user-attachments/assets/cdbc8aba-89cc-42d3-8b44-7e17a74de321)
 
 
 ## Reasoning Behind Approach
