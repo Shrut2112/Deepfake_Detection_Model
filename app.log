@@ -1,0 +1,3 @@
+2025-12-30 00:07:19,622 - deepfake_detection - INFO - Prediction request received
+2025-12-30 00:07:19,633 - deepfake_detection - INFO - Received file: fake_10.jpg with content type: image/jpeg
+2025-12-30 00:07:22,452 - deepfake_detection - INFO - Prediction successful | probability=0.2098

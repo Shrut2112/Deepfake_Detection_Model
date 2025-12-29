@@ -1,7 +1,11 @@
 streamlit
 pillow
-cv2
+opencv-python
 tensorflow
 numpy
 pandas
 matplotlib
+fastapi
+python-multipart
+pydantic
+uvicorn
