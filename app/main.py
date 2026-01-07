@@ -1,10 +1,10 @@
 from fastapi import FastAPI,UploadFile,File,HTTPException
-from .model import Model
+from app.model import Model
 import numpy as np
 from app.preprocess import get_dft_rgb_feat
 import cv2
-from .schema import PredictionResponse
-from .utilis import image_to_base64
+from app.schema import PredictionResponse
+from app.utilis import image_to_base64
 import logging
 from app.core.logging import setup_logger
 
@@ -13,6 +13,10 @@ model = Model()
 
 setup_logger()
 logger = logging.getLogger("deepfake_detection")
+
+@app.get("/health")
+def check():
+    return {"msg": "working fine"}
 
 @app.post("/predict",response_model=PredictionResponse)
 async def predict(file: UploadFile = File(...)):

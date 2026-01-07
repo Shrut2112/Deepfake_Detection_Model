@@ -1,8 +1,11 @@
 from tensorflow.keras.models import load_model
+from pathlib import Path
 
 class Model:
     def __init__(self):
-        self.model = load_model(r'D:\Work_Place\Personal_Projects\Deepfake_Detection_Model\app\Deepfake_classif.h5')
+        Base_DIR = Path(__file__).resolve().parent
+        MODEL_PATH = Base_DIR / "Deepfake_classif.h5"
+        self.model = load_model(MODEL_PATH)
         
     def prediction(self,input_pair):
         """Make model prediction from [rgb_input, dft_input]."""

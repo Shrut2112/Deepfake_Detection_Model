@@ -1,3 +1,96 @@
 2025-12-30 00:07:19,622 - deepfake_detection - INFO - Prediction request received
 2025-12-30 00:07:19,633 - deepfake_detection - INFO - Received file: fake_10.jpg with content type: image/jpeg
 2025-12-30 00:07:22,452 - deepfake_detection - INFO - Prediction successful | probability=0.2098
+2026-01-06 17:28:22,236 - deepfake_detection - INFO - Prediction request received
+2026-01-06 17:28:22,317 - deepfake_detection - INFO - Received file: id.jpg with content type: image/jpeg
+2026-01-06 17:28:26,288 - deepfake_detection - INFO - Prediction successful | probability=0.2027
+2026-01-07 16:38:13,453 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:38:17,503 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 16:38:17,512 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:40:15,892 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:40:19,524 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 16:40:19,532 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:51:52,822 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:51:57,593 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 16:51:57,603 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:52:53,076 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:52:56,171 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 16:52:56,178 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:54:24,440 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:57:21,202 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 16:57:25,743 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 16:57:25,753 - fastapi - ERROR - Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2026-01-07 17:01:18,467 - deepfake_detection - INFO - Prediction request received
+2026-01-07 17:01:18,487 - deepfake_detection - ERROR - Unexpected error during prediction
+Traceback (most recent call last):
+  File "D:\Work_Place\Personal_Projects\Deepfake_Detection_Model\app\main.py", line 34, in predict
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+cv2.error: OpenCV(4.12.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2026-01-07 17:01:18,490 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 500 Internal Server Error"
+2026-01-07 17:01:20,995 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 17:01:21,007 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-07 17:02:06,889 - deepfake_detection - INFO - Prediction request received
+2026-01-07 17:02:06,891 - deepfake_detection - ERROR - Unexpected error during prediction
+Traceback (most recent call last):
+  File "D:\Work_Place\Personal_Projects\Deepfake_Detection_Model\app\main.py", line 34, in predict
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+cv2.error: OpenCV(4.12.0) D:\a\opencv-python\opencv-python\opencv\modules\imgproc\src\color.cpp:199: error: (-215:Assertion failed) !_src.empty() in function 'cv::cvtColor'
+
+2026-01-07 17:02:06,893 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 500 Internal Server Error"
+2026-01-07 17:02:09,276 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 17:02:09,287 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"
+2026-01-07 17:08:06,111 - deepfake_detection - INFO - Prediction request received
+2026-01-07 17:08:06,130 - deepfake_detection - INFO - Received file: test.jpg with content type: image/jpeg
+2026-01-07 17:08:09,504 - deepfake_detection - INFO - Prediction successful | probability=0.2098
+2026-01-07 17:08:09,512 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2026-01-07 17:08:32,193 - deepfake_detection - INFO - Prediction request received
+2026-01-07 17:08:32,195 - deepfake_detection - INFO - Received file: test.jpg with content type: image/jpeg
+2026-01-07 17:08:35,246 - deepfake_detection - INFO - Prediction successful | probability=0.2098
+2026-01-07 17:08:35,248 - httpx - INFO - HTTP Request: POST http://testserver/predict "HTTP/1.1 200 OK"
+2026-01-07 17:08:36,869 - absl - WARNING - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2026-01-07 17:08:36,880 - httpx - INFO - HTTP Request: GET http://testserver/health "HTTP/1.1 200 OK"

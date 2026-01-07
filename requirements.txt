@@ -1,6 +1,6 @@
 streamlit
 pillow
-opencv-python
+opencv-python-headless
 tensorflow
 numpy
 pandas
@@ -9,3 +9,4 @@ fastapi
 python-multipart
 pydantic
 uvicorn
+pytest
